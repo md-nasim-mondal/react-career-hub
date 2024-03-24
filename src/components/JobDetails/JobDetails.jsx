@@ -11,8 +11,12 @@ const JobDetails = () => {
     // console.log(job);
 
     const handleApplyJob = () => {
-        saveJobApplication(idInt);
-        toast('You have applied successfully');
+        const toastContent = saveJobApplication(idInt);
+        if(toastContent === 'You have applied successfully'){
+            toast(toastContent);
+        }else{
+            toast.warn(toastContent);
+        }
     }
 
     return (

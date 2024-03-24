@@ -12,6 +12,9 @@ const saveJobApplication = (id) => {
     if(!exists){
         storedJobApplications.push(id);
         localStorage.setItem('job-applications', JSON.stringify(storedJobApplications));
+        return('You have applied successfully');
+    }else{
+        return('You have already applied for this job');
     }
 };
 
