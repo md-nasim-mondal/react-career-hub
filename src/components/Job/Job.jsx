@@ -1,8 +1,9 @@
 import { MdLocationOn } from "react-icons/md";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const Job = ({ job }) => {
     console.log(job);
-    const {
+    const {id, 
         logo,
         job_title,
         company_name,
@@ -28,7 +29,9 @@ const Job = ({ job }) => {
                     <h2 className="flex gap-2"><AiOutlineDollar /> {salary}</h2>
                 </div>
                 <div className="card-actions">
+                    <Link to={`/job/${id}`}>
                     <button className="btn btn-primary">View Details</button>
+                    </Link>
                 </div>
             </div>
         </div>
